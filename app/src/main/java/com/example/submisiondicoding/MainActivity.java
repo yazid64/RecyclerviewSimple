@@ -6,11 +6,13 @@ import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 product_adapter adapter;
     //the recyclerview
     RecyclerView recyclerView;
+    private static final int TIME_LIMIT = 1500;
+    private static long backPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,6 +144,34 @@ product_adapter adapter;
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+
+            case  R.id.action_info:
+                // change this code beacuse your app will crash
+                startActivity(new Intent(MainActivity.this,about.class));
+                return true;
+        }
+
+        return false;
+    }
+    @Override
+    public void onBackPressed() {
+        if (TIME_LIMIT + backPressed > System.currentTimeMillis()){
+            super.onBackPressed();
+        }else {
+            Toast.makeText(getApplicationContext(),"Press once again to exit", Toast.LENGTH_SHORT).show();
+        }
+        backPressed =System.currentTimeMillis();
     }
 }
 

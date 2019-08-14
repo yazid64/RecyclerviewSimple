@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class detailbiodata extends AppCompatActivity {
 private Toolbar toolbar;
-    TextView desc,nama;
+    TextView desc;
     ImageView img;
     TextView wafat;
     TextView lahir;
@@ -21,12 +22,11 @@ private Toolbar toolbar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailbiodata);
 
-        nama = findViewById(R.id.tv_nama);
-        toolbar = findViewById(R.id.toolbar_detail);
-        desc = findViewById(R.id.hero_desc);
-        img = findViewById(R.id.img_hero);
-        wafat = findViewById(R.id.tv_wafat);
-        lahir = findViewById(R.id.tv_lahir);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_detail);
+        desc = (TextView) findViewById(R.id.hero_desc);
+        img = (ImageView) findViewById(R.id.img_hero);
+        wafat = (TextView) findViewById(R.id.tv_wafat);
+        lahir = (TextView) findViewById(R.id.tv_lahir);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Detail");
@@ -37,16 +37,11 @@ private Toolbar toolbar;
 
         if(getIntent().getExtras()!=null) {
             Bundle bundle = getIntent().getExtras();
-            nama.setText(bundle.getString("nama"));
             img.setImageResource(bundle.getInt("image"));
             wafat.setText(bundle.getString("wafat"));
             lahir.setText(bundle.getString("lahir"));
             desc.setText(bundle.getString("desc"));
 
-
-        }else {
-//            textViewTitle.setText(getIntent().getStringExtra("title"));
-//            textViewShortDesc.setText(getIntent().getStringExtra("Shortdesc"));
         }
     }
     @Override

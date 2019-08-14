@@ -31,16 +31,6 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Light">
             </androidx.appcompat.widget.Toolbar>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_nama"
-                android:text="Hero Title"
-                android:textStyle="bold"
-                android:layout_marginTop="13dp"
-                android:paddingLeft="45dp"
-                android:textSize="18sp"/>
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
