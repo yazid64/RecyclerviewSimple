@@ -21,44 +21,38 @@ public class about extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.profile_expanded);
 
-        Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-
-        layout1 = new ConstraintSet();
-        layout2 = new ConstraintSet();
-        imageViewPhoto = findViewById(R.id.photo);
-        constraintLayout = findViewById(R.id.constraint_layout);
-        layout2.clone(this,R.layout.profile_expanded);
-        layout1.clone(constraintLayout);
-
-        imageViewPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                if (!isOpen) {
-                    TransitionManager.beginDelayedTransition(constraintLayout);
-                    layout2.applyTo(constraintLayout);
-                    isOpen = !isOpen ;
-                }
-
-                else {
-
-                    TransitionManager.beginDelayedTransition(constraintLayout);
-                    layout1.applyTo(constraintLayout);
-                    isOpen = !isOpen ;
-
-                }
-
-
-
-
-
-
-            }
-        });
+//        Window w = getWindow();
+//        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//
+//        layout1 = new ConstraintSet();
+//        layout2 = new ConstraintSet();
+//        imageViewPhoto = findViewById(R.id.photo);
+//        constraintLayout = findViewById(R.id.constraint_layout);
+//        layout2.clone(this,R.layout.profile_expanded);
+//        layout1.clone(constraintLayout);
+//
+//        imageViewPhoto.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                if (!isOpen) {
+//                    TransitionManager.beginDelayedTransition(constraintLayout);
+//                    layout2.applyTo(constraintLayout);
+//                    isOpen = !isOpen ;
+//                }
+//
+//                else {
+//
+//                    TransitionManager.beginDelayedTransition(constraintLayout);
+//                    layout1.applyTo(constraintLayout);
+//                    isOpen = !isOpen ;
+//
+//                }
+//            }
+//        });
 
     }
 }

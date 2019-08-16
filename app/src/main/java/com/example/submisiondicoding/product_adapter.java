@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -50,6 +51,13 @@ public class product_adapter extends RecyclerView.Adapter<product_adapter.Produc
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+//                intent.putExtra("detail",product.getBiodata());
+            }
+        });
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent intent = new Intent(mCtx.getApplicationContext(), detailbiodata.class);
                 intent.putExtra("image",product.getImage());
                 intent.putExtra("nama",product.getNama());
@@ -58,7 +66,6 @@ public class product_adapter extends RecyclerView.Adapter<product_adapter.Produc
                 intent.putExtra("lahir",product.getTanggal_lahir());
 //                intent.putExtra(R.string.Ryandhika);
                 mCtx.startActivity(intent);
-//                intent.putExtra("detail",product.getBiodata());
             }
         });
 
@@ -75,6 +82,7 @@ public class product_adapter extends RecyclerView.Adapter<product_adapter.Produc
 
         TextView textViewTitle, textViewShortDesc;
         ImageView imageView;
+        CardView cardView;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
@@ -82,6 +90,7 @@ public class product_adapter extends RecyclerView.Adapter<product_adapter.Produc
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             imageView = itemView.findViewById(R.id.img_item_photo);
+            cardView = itemView.findViewById(R.id.card);
 
         }
     }

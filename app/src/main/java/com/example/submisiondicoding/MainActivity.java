@@ -35,8 +35,8 @@ product_adapter adapter;
         toolbar = findViewById(R.id.toolbar_people);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hero");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setTitle("Hero");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -74,15 +74,15 @@ product_adapter adapter;
                         R.drawable.kartini,
                         "21 April 1879",
                         "17 September 1904, Kabupaten Rembang"));
-        productList.add(
-                new product(
-                        "Soekarno",
-                        "Ir. seokarno (lahir di surabaya, jawa timur, 6 juni 1901) dan meninggal di jakarta, 21 juni 1970 pada umur 69 tahun. beliau adalah presiden pertama indonesia yang mnnjabat periode" +
-                                " tahun 1945-1966. ia adalah proklamator kemerdekaan indonesia yang terjadi tanggal 17 augustus 1945. dan beliau adalah orang pertama kali yang mencetuskan konsep mengenai " +
-                                "pancasila sebagai dasar negara dan ia sendiri yang menamainya",
-                        R.drawable.presiden_sukarno,
-                        "6 Juni 1901",
-                        "21 Juni 1970, Jakarta"));
+//        productList.add(
+//                new product(
+//                        "",
+//                        "Ir. seokarno (lahir di surabaya, jawa timur, 6 juni 1901) dan meninggal di jakarta, 21 juni 1970 pada umur 69 tahun. beliau adalah presiden pertama indonesia yang mnnjabat periode" +
+//                                " tahun 1945-1966. ia adalah proklamator kemerdekaan indonesia yang terjadi tanggal 17 augustus 1945. dan beliau adalah orang pertama kali yang mencetuskan konsep mengenai " +
+//                                "pancasila sebagai dasar negara dan ia sendiri yang menamainya",
+//                        R.drawable.presiden_sukarno,
+//                        "6 Juni 1901",
+//                        "21 Juni 1970, Jakarta"));
         productList.add(
                 new product(
                         "Pangeran Diponegoro",
@@ -92,17 +92,41 @@ product_adapter adapter;
                         R.drawable.diponegoro,
                         "11 November 1785",
                         "8 Januari 1855, Makassar"));
+
         productList.add(
                 new product(
-                        "Moh Hatta",
-                        "Dr.(HC) Drs. H. Mohammad Hatta (lahir dengan nama Mohammad Athar, populer sebagai Bung Hatta; lahir di Fort de Kock (sekarang Bukittinggi, Sumatera Barat), Hindia Belanda, " +
-                                "12 Agustus 1902 – meninggal di Jakarta, 14 Maret 1980 pada umur 77 tahun) adalah pejuang, negarawan, ekonom, dan juga Wakil Presiden Indonesia yang pertama. Ia bersama Soekarno " +
-                                "memainkan peranan penting untuk memerdekakan bangsa Indonesia dari penjajahan Belanda sekaligus memproklamirkannya pada 17 Agustus 1945. Ia juga pernah menjabat sebagai Perdana " +
-                                "Menteri dalam Kabinet Hatta I, Hatta II, dan RIS. Ia mundur dari " +
-                                "jabatan wakil presiden pada tahun 1956, karena berselisih dengan Presiden Soekarno. Hatta juga dikenal sebagai Bapak Koperasi Indonesia.",
-                        R.drawable.mohammad_hatta,
-                        "12 Agustus 1902",
-                        "14 Maret 1980, Rumah Sakit Umum Pusat Nasional dr. Cipto Mangunkusumo, Jakarta"));
+                        "Soekarno",
+                        "Ir. seokarno (lahir di surabaya, jawa timur, 6 juni 1901) dan meninggal di jakarta, 21 juni 1970 pada umur 69 tahun. beliau adalah presiden pertama indonesia yang mnnjabat periode" +
+                                " tahun 1945-1966. ia adalah proklamator kemerdekaan indonesia yang terjadi tanggal 17 augustus 1945. dan beliau adalah orang pertama kali yang mencetuskan konsep mengenai " +
+                                "pancasila sebagai dasar negara dan ia sendiri yang menamainya",
+                        R.drawable.soekarno,
+                        "6 Juni 1901",
+                        "21 Juni 1970, Jakarta"
+                )
+        );
+
+productList.add(
+        new product(
+                "Moh Hatta",
+                "Dr.(HC) Drs. H. Mohammad Hatta (lahir dengan nama Mohammad Athar, populer sebagai Bung Hatta; lahir di Fort de Kock (sekarang Bukittinggi, Sumatera Barat), Hindia Belanda, " +
+                        "12 Agustus 1902 – meninggal di Jakarta, 14 Maret 1980 pada umur 77 tahun) adalah pejuang, negarawan, ekonom, dan juga Wakil Presiden Indonesia yang pertama. Ia bersama Soekarno " +
+                        "memainkan peranan penting untuk memerdekakan bangsa Indonesia dari penjajahan Belanda sekaligus memproklamirkannya pada 17 Agustus 1945. Ia juga pernah menjabat sebagai Perdana " +
+                        "Menteri dalam Kabinet Hatta I, Hatta II, dan RIS. Ia mundur dari " +
+                        "jabatan wakil presiden pada tahun 1956, karena berselisih dengan Presiden Soekarno. Hatta juga dikenal sebagai Bapak Koperasi Indonesia.",
+                R.drawable.hatta,
+                "12 Agustus 1902",
+                "14 Maret 1980, Rumah Sakit Umum Pusat Nasional dr. Cipto Mangunkusumo, Jakarta"));
+//        productList.add(
+//                new product(
+//                        "Moh Hatta",
+//                        "Dr.(HC) Drs. H. Mohammad Hatta (lahir dengan nama Mohammad Athar, populer sebagai Bung Hatta; lahir di Fort de Kock (sekarang Bukittinggi, Sumatera Barat), Hindia Belanda, " +
+//                                "12 Agustus 1902 – meninggal di Jakarta, 14 Maret 1980 pada umur 77 tahun) adalah pejuang, negarawan, ekonom, dan juga Wakil Presiden Indonesia yang pertama. Ia bersama Soekarno " +
+//                                "memainkan peranan penting untuk memerdekakan bangsa Indonesia dari penjajahan Belanda sekaligus memproklamirkannya pada 17 Agustus 1945. Ia juga pernah menjabat sebagai Perdana " +
+//                                "Menteri dalam Kabinet Hatta I, Hatta II, dan RIS. Ia mundur dari " +
+//                                "jabatan wakil presiden pada tahun 1956, karena berselisih dengan Presiden Soekarno. Hatta juga dikenal sebagai Bapak Koperasi Indonesia.",
+//                        R.drawable.mohammad_hatta,
+//                        "12 Agustus 1902",
+//                        "14 Maret 1980, Rumah Sakit Umum Pusat Nasional dr. Cipto Mangunkusumo, Jakarta"));
         productList.add(
                 new product(
                         "Sultan Hassanudin",

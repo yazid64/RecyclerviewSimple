@@ -11,7 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class detailbiodata extends AppCompatActivity {
-private Toolbar toolbar;
+Toolbar toolbar;
     TextView desc;
     ImageView img;
     TextView wafat;
